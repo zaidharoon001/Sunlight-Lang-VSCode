@@ -1,0 +1,26 @@
+{
+    "name": "sunlightLang",
+    "displayName": "Sunlight-Lang",
+    "description": "VSCode support for this language named Sunlight-Lang",
+    "publisher": "ameerwasi",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "sunlightlang",
+            "aliases": ["Sunlight Language", "sunlightlang"],
+            "extensions": [".slt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sunlightlang",
+            "scopeName": "main.slt",
+            "path": "./syntaxes/sunlightlang.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,113 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Sunlight Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#assignment"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sunlightlang",
+				"match": "\\b(where|if|then|end|mod|every|is|type|class|open|not|include|lib|else)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.sunlightlang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sunlightlang",
+					"match": "\\\\."
+				}
+			]
+		},
+
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.sunlightlang",
+					"begin": "--",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.begin.sunlightlang"
+						}
+					},
+					"end": "\n"
+				}
+			]
+		},
+
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.float.sunlightlang",
+					"match": "(?:(?:[-]?)(?:[0-9e]*)(?:[.]){1}(?:[0-9]+))"
+				},
+				{
+					"name": "constant.numeric.integer.sunlightlang",
+					"match": "\\b(?:[-]?)(?:[0-9]+)"
+				},
+				{
+					"name": "constant.language.sunlightlang",
+					"match": "\\$?\\b[A-Z]+[A-Za-z-0-9]*\\b"
+				}
+			]
+		},
+
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arithmethic.sunlightlang",
+					"match": "(\\+|\\-|\\.\\.|\\*|\\/|:|::|\\||\\!|\\\\)"
+				},
+				{
+					"name": "keyword.operator.assignment.sunlightlang",
+					"match": "(\\-\\>|\\<\\-)"
+				},
+				{
+					"name": "keyword.operator.bitwise.sunlightlang",
+					"match": "(@|\\?|\\&|\\.)"
+				},
+				{
+					"name": "keyword.operator.logical.sunlightlang",
+					"match": "(and|or)"
+				},
+				{
+					"name": "keyword.operator.relation.sunlightlang",
+					"match": "(\\=|\\/\\=|\\>|\\<|\\>\\=|\\<\\=|\\,)"
+				}
+			]
+		},
+
+		"constants": {
+			"name": "constant.language.sunlightlang",
+			"match": "\\b(true|false)\\b|\\(|\\)"
+		}
+
+	},
+	"scopeName": "main.slt"
+}
