@@ -94,7 +94,7 @@
 				},
 				{
 					"name": "keyword.operator.logical.sunlightlang",
-					"match": "(and|or)"
+					"match": "\\b(and|or)\\b"
 				},
 				{
 					"name": "keyword.operator.relation.sunlightlang",
