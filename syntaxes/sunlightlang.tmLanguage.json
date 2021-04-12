@@ -31,7 +31,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.sunlightlang",
-				"match": "\\b(where|if|then|end|mod|every|is|class|open|def|not|include|lib|else|external)\\b"
+				"match": "\\b(where|if|then|end|mod|every|is|class|open|def|include|lib|else|external)\\b"
 			}]
 		},
 		"strings": {
@@ -82,7 +82,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.arithmethic.sunlightlang",
-					"match": "(\\+|\\-|\\.\\.|\\*|\\/|:|::|\\||\\!|\\\\)"
+					"match": "(\\+|\\-|\\.\\.|\\*|\\/|:|::|\\||\\!|\\\\|~)"
 				},
 				{
 					"name": "keyword.operator.assignment.sunlightlang",
