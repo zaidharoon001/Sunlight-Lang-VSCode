@@ -31,7 +31,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.sunlightlang",
-				"match": "\\b(where|if|then|end|mod|every|is|class|open|def|include|lib|else|external)\\b"
+				"match": "\\b(where|if|then|end|mod|class|open|def|include|lib|else|external)\\b"
 			}]
 		},
 		"strings": {
